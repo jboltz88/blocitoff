@@ -55,6 +55,7 @@ group :development, :test do
   # gem 'chromedriver-helper' # helps with using Chrome in feature specs
   gem 'factory_girl_rails'
   gem 'selenium-webdriver' # used by JavaScript-dependent feature specs (`js: true`)
+  gem 'faker'
 end
 
 group :development do
