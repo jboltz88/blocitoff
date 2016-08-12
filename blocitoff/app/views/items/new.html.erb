@@ -1,0 +1,10 @@
+<h1>New To-Do Item</h1>
+<div class="row">
+  <div class="col-md-12">
+    <p>Make sure you stay on top of your to-dos!</p>
+  </div>
+</div>
+
+<div class="col-md-8">
+  <%= render partial: 'form', locals: { user: @user, item: @item } %>
+</div>
