@@ -29,6 +29,7 @@ gem 'figaro', '1.0'
 
 gem 'bcrypt'
 
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -37,6 +38,10 @@ gem 'bcrypt'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+group :test do
+  gem 'database_cleaner'
+  gem 'email_spec'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -46,6 +51,10 @@ group :development, :test do
   gem 'pry-inline' # automatically shows variable values inline in rails console
   gem 'rb-readline' # rb-readline makes pry history behave on all platforms
   gem 'shoulda'
+  gem 'capybara'
+  # gem 'chromedriver-helper' # helps with using Chrome in feature specs
+  gem 'factory_girl_rails'
+  gem 'selenium-webdriver' # used by JavaScript-dependent feature specs (`js: true`)
 end
 
 group :development do
