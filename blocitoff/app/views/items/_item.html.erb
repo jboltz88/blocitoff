@@ -4,7 +4,7 @@
       <%= item.name %>
     </h4>
     <small>
-      submitted <%= time_ago_in_words(item.created_at) %> ago
+      <%= distance_of_time_in_words(item.created_at, Time.now) %> since item was created.
     </small>
   </div>
 </div>
