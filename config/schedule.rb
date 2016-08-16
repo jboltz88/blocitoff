@@ -19,7 +19,9 @@
 
 # Learn more: http://github.com/javan/whenever
 set :environment, "development"
+set :output, nil
+set :output, {:error => nil, :standard=> nil}
 
-every 1.hour do 
+every 1.hour do
   rake "todo:delete_items"
 end
