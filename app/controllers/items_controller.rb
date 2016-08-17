@@ -7,7 +7,7 @@ class ItemsController < ApplicationController
   def create
     @user = current_user
     @item = @user.items.build(item_params)
-    
+
     if @item.save
       flash[:notice] = "Item was saved successfully."
       redirect_to [@user]
@@ -18,7 +18,9 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @item = Item.find(params[:id])
+    @item = current_user.items.find(params[:id])
+    # @item = Item.find(params[:id])
+    # if @item.user == current_user
     if @item.destroy
       flash[:notice] = "\"#{@item.name}\" was deleted successfully."
     else
@@ -29,6 +31,7 @@ class ItemsController < ApplicationController
       format.html
       format.js
     end
+    # end
   end
 
 
