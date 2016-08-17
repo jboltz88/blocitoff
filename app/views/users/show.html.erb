@@ -5,6 +5,9 @@
 <div class="container">
   <h3>To-Do Items:</h3>
   <%= render @user.items %>
+  <%# @user.items.each do |item| %>
+    <%#= render 'item', locals: { item: item } %>
+  <%# end %>
 </div>
 <br>
 <div class="container">
