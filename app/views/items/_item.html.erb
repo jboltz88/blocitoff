@@ -1,9 +1,9 @@
 <div class="media" id="item-<%= item.id %>">
   <div class="media-body">
     <h4 class="media-heading">
+      <%= link_to "", [@user, item], method: :delete, class: 'glyphicon glyphicon-ok', remote: true %>
       <%= item.name %>
     </h4>
-    <%= link_to "", [@user, item], method: :delete, class: 'glyphicon glyphicon-ok', remote: true %>
     <small>
       <%= distance_of_time_in_words(item.created_at, Time.now) %> since item was created.
     </small>

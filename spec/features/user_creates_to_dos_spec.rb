@@ -23,6 +23,9 @@ RSpec.feature "User Creates To Dos", type: :feature, js: true do
 
     expect(page).to have_text 'Item was saved successfully'
     expect(page).to have_text 'Get milk'
+    expect(page).to have_text 'since item was created'
+    expect { click_link '' }.to change(Item, :count).by(-1)
+
     # Assertions
   end
 end
